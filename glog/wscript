@@ -58,8 +58,6 @@ def configure(confCtx):
 	return
     srcPath = os.path.join(confCtx.path.abspath(), __srcDir)
     os.chdir(srcPath)
-    confCtx.msg('CXXFLAGS', '-I%s/include' % confCtx.srcnode.abspath())
-    confCtx.msg('LDFLAGS', '-L%s/lib' % confCtx.srcnode.abspath())
     if os.name == 'posix':
 	returnCode = subprocess.call([
 		'sh',
